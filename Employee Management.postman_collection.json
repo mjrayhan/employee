@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "0be634a3-09c9-41ab-9c74-aa5997632176",
+		"name": "Employee Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27987827"
+	},
+	"item": [
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Ravi\",\n    \"lastName\": \"Kumar\",\n    \"emailAddress\": \"ravikumar@gmail.com\",\n    \"phone\": \"777777773\",\n    \"birthDate\": \"2024-03-19T19:40:16.941Z\",\n    \"jobTitle\": \"Developer\",\n    \"department\": \"CS\",\n    \"location\": \"New Jersey\",\n    \"startDate\": \"2024-03-19T19:40:16.941Z\",\n    \"reportingManager\": \"Jenny\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/createEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"createEmployee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Ravi\",\n    \"lastName\": \"Kumar\",\n    \"emailAddress\": \"ravikumar@gmail.com\",\n    \"phone\": \"777777773\",\n    \"birthDate\": \"2024-03-19T19:40:16.941Z\",\n    \"jobTitle\": \"Developer\",\n    \"department\": \"CS\",\n    \"location\": \"New Jersey\",\n    \"startDate\": \"2024-03-19T19:40:16.941Z\",\n    \"reportingManager\": \"Jenny\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/createEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"createEmployee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Mar 2024 19:44:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"employeeId\": 3,\n    \"firstName\": \"Ravi\",\n    \"lastName\": \"Kumar\",\n    \"emailAddress\": \"ravikumar@gmail.com\",\n    \"phone\": \"777777773\",\n    \"birthDate\": \"2024-03-19T19:40:16.941+00:00\",\n    \"jobTitle\": \"Developer\",\n    \"department\": \"CS\",\n    \"location\": \"New Jersey\",\n    \"startDate\": \"2024-03-19T19:40:16.941+00:00\",\n    \"reportingManager\": \"Jenny\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Employee by ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/getEmployee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"getEmployee",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Mar 2024 19:44:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"employeeId\": 3,\n    \"firstName\": \"Ravi\",\n    \"lastName\": \"Kumar\",\n    \"emailAddress\": \"ravikumar@gmail.com\",\n    \"phone\": \"777777773\",\n    \"birthDate\": \"2024-03-19T19:40:16.941+00:00\",\n    \"jobTitle\": \"Developer\",\n    \"department\": \"CS\",\n    \"location\": \"New Jersey\",\n    \"startDate\": \"2024-03-19T19:40:16.941+00:00\",\n    \"reportingManager\": \"Jenny\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/getEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"getEmployees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/getEmployees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"getEmployees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Mar 2024 19:45:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"employeeId\": 1,\n        \"firstName\": \"Jahir\",\n        \"lastName\": \"R\",\n        \"emailAddress\": \"jahirr@gmail.com\",\n        \"phone\": \"777777777\",\n        \"birthDate\": \"2024-03-19T19:40:16.941+00:00\",\n        \"jobTitle\": \"Developer\",\n        \"department\": \"IT\",\n        \"location\": \"New York\",\n        \"startDate\": \"2024-03-19T19:40:16.941+00:00\",\n        \"reportingManager\": \"Ravi\"\n    },\n    {\n        \"employeeId\": 2,\n        \"firstName\": \"Jahir\",\n        \"lastName\": \"R\",\n        \"emailAddress\": \"jahirr@gmail.com\",\n        \"phone\": \"777777777\",\n        \"birthDate\": \"2024-03-19T19:40:16.941+00:00\",\n        \"jobTitle\": \"Developer\",\n        \"department\": \"IT\",\n        \"location\": \"New York\",\n        \"startDate\": \"2024-03-19T19:40:16.941+00:00\",\n        \"reportingManager\": \"Ravi\"\n    },\n    {\n        \"employeeId\": 3,\n        \"firstName\": \"Ravi\",\n        \"lastName\": \"Kumar\",\n        \"emailAddress\": \"ravikumar@gmail.com\",\n        \"phone\": \"777777773\",\n        \"birthDate\": \"2024-03-19T19:40:16.941+00:00\",\n        \"jobTitle\": \"Developer\",\n        \"department\": \"CS\",\n        \"location\": \"New Jersey\",\n        \"startDate\": \"2024-03-19T19:40:16.941+00:00\",\n        \"reportingManager\": \"Jenny\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/deleteEmployee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"deleteEmployee",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/deleteEmployee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"deleteEmployee",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Mar 2024 19:45:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Jennifer\",\n    \"lastName\": \"Ran\",\n    \"emailAddress\": \"jennyran@gmail.com\",\n    \"phone\": \"777777774\",\n    \"birthDate\": \"2024-03-19T19:40:16.941Z\",\n    \"jobTitle\": \"Developer\",\n    \"department\": \"IT\",\n    \"location\": \"New Orleans\",\n    \"startDate\": \"2024-03-19T19:40:16.941Z\",\n    \"reportingManager\": \"Mary\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/updateEmployee/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"updateEmployee",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Jennifer\",\n    \"lastName\": \"Ran\",\n    \"emailAddress\": \"jennyran@gmail.com\",\n    \"phone\": \"777777774\",\n    \"birthDate\": \"2024-03-19T19:40:16.941Z\",\n    \"jobTitle\": \"Developer\",\n    \"department\": \"IT\",\n    \"location\": \"New Orleans\",\n    \"startDate\": \"2024-03-19T19:40:16.941Z\",\n    \"reportingManager\": \"Mary\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/updateEmployee/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"updateEmployee",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Mar 2024 19:46:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"employeeId\": 3,\n    \"firstName\": \"Jennifer\",\n    \"lastName\": \"Ran\",\n    \"emailAddress\": \"jennyran@gmail.com\",\n    \"phone\": \"777777774\",\n    \"birthDate\": \"2024-03-19T19:40:16.941+00:00\",\n    \"jobTitle\": \"Developer\",\n    \"department\": \"IT\",\n    \"location\": \"New Orleans\",\n    \"startDate\": \"2024-03-19T19:40:16.941+00:00\",\n    \"reportingManager\": \"Mary\"\n}"
+				}
+			]
+		}
+	]
+}
